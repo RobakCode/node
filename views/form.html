@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>@pageTitle@</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initail-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#" class="brand-logo" style="padding-left: 16px;"
+              >Node.js - server</a
+            >
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="/">Strona głowna</a></li>
+              <li class="active"><a href="/form">Formularz</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <form
+          class="col s12"
+          action="/save-form"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="row">
+            <div class="input-field col s12">
+              <input
+                placeholder="Imię i nazwisko"
+                id="name"
+                name="name"
+                type="text"
+                class="validate"
+              />
+              <label for="first_name">Imię i nazwisko</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="file" name="file" type="file" class="validate" />
+            </div>
+            <div class="col s12">
+              <button class="waves-effect waves-light btn" type="submit">
+                Zapisz mnie
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
