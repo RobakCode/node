@@ -1,5 +1,14 @@
 version: "3.3"
 services:
+  front:
+    image: node:12.3.1
+    working_dir: "/var/app"
+    volumes:
+      - "./:/var/app"
+    restart: unless-stopped
+    command: bash -c "node app.js"
+    ports:
+      - "3009:3009"
   db:
     image: mysql:5.7
     restart: always
@@ -20,7 +29,7 @@ services:
       - PMA_ARBITRARY=1
     restart: always
     ports:
-      - 8081:80
+      - 8089:80
     volumes:
       - /sessions
 volumes:

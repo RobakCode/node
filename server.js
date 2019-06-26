@@ -12,7 +12,7 @@ function start(routing) {
 
       routing[pathName](request, response);
     })
-    .listen(8080, "127.0.0.1");
+    .listen(3000, "0.0.0.0");
 }
 
 exports.start = start;
